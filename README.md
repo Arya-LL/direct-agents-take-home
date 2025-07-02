@@ -10,20 +10,32 @@ Below are the instructions for running this app locally. I over-explain the nece
   - In that .env file, replace "INSERT_KEY_HERE" with the API key that I emailed Lauren Goldstein
     - I did not include the API key myself for security reasons
 - Run the development server by opening a terminal in that now unzipped folder (instructions for this varies by operating system)
+
+  - Note: one of the four packages listed below need to be installed on the system you are running this from (npm, yarn, pnpm, bun)
+
   - type one of the below commands in a terminal:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  ```bash
+  npm install
+  # or
+  yarn install
+  # or
+  pnpm install
+  # or
+  bun install
+  ```
 
-- the first of the four commands above is probably the one you will want to use
-- One of the four packages listed above need to be installed on the system you are running this from (npm, yarn, pnpm, bun)
+  - type one of the below commands in a terminal:
+
+  ```bash
+  npm run dev
+  # or
+  yarn dev
+  # or
+  pnpm dev
+  # or
+  bun dev
+  ```
 
 ## Opening on the same device that is running the server
 

@@ -1,8 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Default instructions from next.js for running this code locally
 
-## Getting Started
+Below are the instructions for running this app locally. I over-explain the necessary steps, but I skipped on details for some of these steps because the step is platform specific.
 
-First, run the development server:
+- Download this repository by downloading the zip file (steps below)
+  - Click the green code button above
+  - A popup window will appear. The bottom-most portion of it will have a "Download ZIP" button. Click this button to download the code
+  - Unzip the folder
+  - Open the .env file in notepad or your text editor of choice
+  - In that .env file, replace "INSERT_KEY_HERE" with the API key that I emailed Lauren Goldstein
+    - I did not include the API key myself for security reasons
+- Run the development server by opening a terminal in that now unzipped folder (instructions for this varies by operating system)
+  - type one of the below commands in a terminal:
 
 ```bash
 npm run dev
@@ -14,23 +22,30 @@ pnpm dev
 bun dev
 ```
 
+- the first of the four commands above is probably the one you will want to use
+- One of the four packages listed above need to be installed on the system you are running this from (npm, yarn, pnpm, bun)
+
+## Opening on the same device that is running the server
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Opening on another device that is connected to the same network as the server
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+After running one of the above commands, some text like the following will appear:
+\> take-home-assessment@0.1.0 dev
+\> next dev --turbopack
 
-## Learn More
+▲ Next.js 15.3.4 (Turbopack)
 
-To learn more about Next.js, take a look at the following resources:
+- Local: http://localhost:3000
+- Network: http://192.168.1.215:3000
+- Environments: .env
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✓ Starting...
+✓ Ready in 643ms
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+On another device, open a browser and go to the link next to the "Network" section from the above output
 
-## Deploy on Vercel
+# Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+I set a budget limit of $10 on the google cloud platform project associated with the api key in this repository. If this budget is reached, the project corresponding to the api key will shut down, causing the chatbot to only reply with API errors. Please let me know if this is happening and I will increase the budget. I don't anticipate this happening, but I placed the limit anyway to prevent runaway costs in the case of infinite/repeating calls.
